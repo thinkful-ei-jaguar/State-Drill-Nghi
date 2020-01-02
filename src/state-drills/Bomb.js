@@ -15,13 +15,9 @@ class Bomb extends React.Component{
   	}, 1000);
   }
 
-  // When component unmount, clears interval
-  componentWillUnmount() {
-  	clearInterval(this.interval);
-  }
-
   checkCount = () => {
   	if(this.state.count >= 8) {
+  		// Stop counting
   		clearInterval(this.interval);
   		return 'BOOM!!!!';
   	}
@@ -41,6 +37,12 @@ class Bomb extends React.Component{
 			</p>
 		</div>
 		);
+  }
+
+  // When component unmount, clears interval
+  // If and when component is hidden, then interval stops running
+  componentWillUnmount() {
+  	clearInterval(this.interval);
   }
 
 }
