@@ -14,7 +14,7 @@ describe('Smoke test', () => {
   	// Renders Component in div
   	ReactDom.render(<Accordion />, div);
   	// Cleanup div
-  	ReacDom.unmountComponentAtNode(div);
+  	ReactDom.unmountComponentAtNode(div);
   })}
 )
 

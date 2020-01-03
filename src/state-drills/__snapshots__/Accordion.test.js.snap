@@ -104,3 +104,9 @@ exports[`Snapshot tests renders no sections as active by default 1`] = `
   </li>
 </ul>
 `;
+
+exports[`Snapshot tests renders when prop is not supplied 1`] = `
+<ul>
+  // Printing new array of sections that also includes the element // Cannot print object if it's just this.props.sections
+</ul>
+`;
